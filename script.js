@@ -44,6 +44,7 @@ const english = {
   contactTitle: "Let's talk",
   contactIntro: "I'm seeking full stack opportunities, especially work involving backend development, web applications, and data. If my experience is a fit for your team, get in touch.",
   emailButton: 'Send an email',
+  resumeButton: 'View résumé',
   footerMade: 'Built by Lucas Franzen Nori',
   backToTop: 'Back to top ↑',
 };
@@ -58,6 +59,7 @@ const translatedAttributes = [
   ['.social-links a[href^="https://github.com"]', 'aria-label', 'Lucas Franzen Nori on GitHub, opens in a new tab'],
   ['.social-links a[href^="https://www.linkedin.com"]', 'aria-label', 'Lucas Franzen Nori on LinkedIn, opens in a new tab'],
   ['.social-links a[href^="mailto:"]', 'aria-label', 'Email Lucas Franzen Nori'],
+  ['.contact-button-secondary', 'aria-label', 'Open résumé PDF in a new tab'],
   ['.focus-list', 'aria-label', 'Areas of work'],
   ['#experiencia .tag-list', 'aria-label', 'Technologies used'],
   ['#projeto .tag-list', 'aria-label', 'Project technologies'],

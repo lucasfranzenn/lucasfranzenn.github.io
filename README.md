@@ -16,6 +16,7 @@ Abra `index.html` no navegador. O site não precisa de instalação, servidor ou
 - `styles.css` — visual e layouts responsivos;
 - `script.js` — alternância de idioma e indicação da seção visível;
 - `assets/marfran-local.png` — captura da versão local da Marfran Imports;
+- `assets/curriculo.pdf` — currículo aberto pelo botão na seção de contato;
 - `favicon.svg` — ícone da página.
 
 ## Publicar no GitHub Pages
