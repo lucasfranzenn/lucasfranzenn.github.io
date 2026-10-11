@@ -46,6 +46,7 @@ const english = {
   emailButton: 'Send an email',
   resumeButton: 'View résumé',
   footerMade: 'Built by Lucas Franzen Nori',
+  lastUpdated: 'Information updated on October 10, 2026',
   backToTop: 'Back to top ↑',
 };
 
@@ -59,6 +60,7 @@ const translatedAttributes = [
   ['.social-links a[href^="https://github.com"]', 'aria-label', 'Lucas Franzen Nori on GitHub, opens in a new tab'],
   ['.social-links a[href^="https://www.linkedin.com"]', 'aria-label', 'Lucas Franzen Nori on LinkedIn, opens in a new tab'],
   ['.social-links a[href^="mailto:"]', 'aria-label', 'Email Lucas Franzen Nori'],
+  ['.company-link', 'aria-label', 'Visual Software Ltda., opens in a new tab'],
   ['.contact-button-secondary', 'aria-label', 'Open résumé PDF in a new tab'],
   ['.focus-list', 'aria-label', 'Areas of work'],
   ['#experiencia .tag-list', 'aria-label', 'Technologies used'],
@@ -75,6 +77,7 @@ const originalMetadata = metadata.map(([element, attribute]) => element.getAttri
 const originalTitle = document.title;
 const languageButton = document.querySelector('.language-toggle');
 const languageStatus = document.querySelector('#language-status');
+const resumeLink = document.querySelector('.contact-button-secondary');
 
 function setLanguage(language, announce = false) {
   const isEnglish = language === 'en';
@@ -89,6 +92,7 @@ function setLanguage(language, announce = false) {
   });
   document.title = isEnglish ? 'Lucas Franzen Nori — Full Stack Developer' : originalTitle;
   document.documentElement.lang = isEnglish ? 'en' : 'pt-BR';
+  resumeLink.href = isEnglish ? 'assets/resume.pdf' : 'assets/curriculo.pdf';
   languageButton.dataset.currentLang = isEnglish ? 'en' : 'pt';
   languageButton.setAttribute('aria-label', isEnglish ? 'Switch to Portuguese' : 'Mudar para inglês');
   if (announce) languageStatus.textContent = isEnglish ? 'Language changed to English' : 'Idioma alterado para português';

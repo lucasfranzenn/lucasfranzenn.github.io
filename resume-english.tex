@@ -1,0 +1,171 @@
+%-------------------------
+% Resume in LaTeX
+% Author: Jake Gutierrez
+% Based on: https://github.com/sb2nov/resume
+% License: MIT
+%-------------------------
+
+\documentclass[letterpaper,11pt]{article}
+
+\usepackage{iftex}
+\ifPDFTeX
+  \usepackage[T1]{fontenc}
+  \usepackage[utf8]{inputenc}
+  \usepackage{lmodern}
+\else
+  \usepackage{fontspec}
+  \setmainfont{Arial}
+\fi
+
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage{marvosym}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage{fancyhdr}
+\usepackage[english]{babel}
+\usepackage{tabularx}
+
+%----------FONT OPTIONS----------
+% sans-serif
+% \usepackage[sfdefault]{FiraSans}
+% \usepackage[sfdefault]{roboto}
+% \usepackage[sfdefault]{noto-sans}
+% \usepackage[default]{sourcesanspro}
+
+% serif
+% \usepackage{CormorantGaramond}
+% \usepackage{charter}
+
+\pagestyle{fancy}
+\fancyhf{} % clear all header and footer fields
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+% Adjust margins
+\addtolength{\oddsidemargin}{-0.5in}
+\addtolength{\evensidemargin}{-0.5in}
+\addtolength{\textwidth}{1in}
+\addtolength{\topmargin}{-.5in}
+\addtolength{\textheight}{1.0in}
+
+\urlstyle{same}
+
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+% Section formatting
+\titleformat{\section}{
+  \vspace{-4pt}\scshape\raggedright\large
+}{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
+
+% The pdfTeX-only command was removed for XeTeX compatibility.
+
+%-------------------------
+% Custom commands
+\newcommand{\resumeItem}[1]{
+  \item\small{
+    {#1 \vspace{-2pt}}
+  }
+}
+
+\newcommand{\resumeSubheading}[4]{
+  \vspace{-2pt}\item
+    \begin{tabularx}{0.97\textwidth}[t]{>{\raggedright\arraybackslash}X r}
+      \textbf{#1} & #2 \\
+      \textit{\small#3} & \textit{\small #4} \\
+    \end{tabularx}\vspace{-7pt}
+}
+
+\newcommand{\resumeSubSubheading}[2]{
+    \item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \textit{\small#1} & \textit{\small #2} \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeProjectHeading}[2]{
+    \item
+    \begin{tabularx}{0.97\textwidth}{>{\raggedright\arraybackslash}X r}
+      \small#1 & #2 \\
+    \end{tabularx}\vspace{-7pt}
+}
+
+\newcommand{\resumeSubItem}[1]{\resumeItem{#1}\vspace{-4pt}}
+
+\renewcommand\labelitemii{$\vcenter{\hbox{\tiny$\bullet$}}$}
+
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0.15in, label={}]}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+\newcommand{\resumeItemListStart}{\begin{itemize}}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
+
+%-------------------------------------------
+%%%%%%  RESUME STARTS HERE  %%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{document}
+
+\begin{center}
+    \textbf{\Huge \scshape Lucas Franzen Nori} \\ \vspace{1pt}
+    \small +55 (46) 99941-4199 $|$
+    \href{mailto:franzennlucas@gmail.com}{\underline{franzennlucas@gmail.com}} \\ \vspace{1pt}
+    \href{https://linkedin.com/in/lucasfranzenn}{\underline{linkedin.com/in/lucasfranzenn}} $|$
+    \href{https://lucasfranzenn.github.io/}{\underline{lucasfranzenn.github.io}}
+\end{center}
+
+\section{Professional Summary}
+\small{Junior software developer with professional experience maintaining VB6 systems and migrating data between databases. Developing Marfran, an e-commerce project built with React, TypeScript, C\#/.NET, and PostgreSQL, with frontend and API tests. Seeking a role in web or backend development.}
+
+\section{Professional Experience}
+  \resumeSubHeadingListStart
+    \resumeSubheading
+      {Junior Software Developer}{Aug. 2024 -- May 2025}
+      {Visual Software Ltda.}{Quedas do Igua\c{c}u, PR, Brazil}
+      \resumeItemListStart
+        \resumeItem{Maintained a legacy VB6 system, implementing features and fixing software issues and database-related routines.}
+        \resumeItem{Converted data from third-party systems for use in Visual Software, working with different databases to make the information available in the target system.}
+        \resumeItem{Developed an internal tool using FastReport, DevExpress .NET, SQL connectors, and APIs to support data imports.}
+      \resumeItemListEnd
+  \resumeSubHeadingListEnd
+
+\section{Project}
+  \resumeSubHeadingListStart
+    \resumeProjectHeading
+      {\textbf{Marfran Imports} $|$ \emph{React, TypeScript, C\#/.NET, PostgreSQL}}{In progress}
+      \resumeItemListStart
+        \resumeItem{Developing an e-commerce application with a product catalog and search filters, product pages, an admin dashboard, and basic order creation.}
+        \resumeItem{Connecting the React and TypeScript frontend to a C\#/.NET REST API and PostgreSQL to retrieve and manage products and orders.}
+        \resumeItem{Maintaining automated frontend tests with Vitest and React Testing Library and API tests with xUnit.}
+      \resumeItemListEnd
+  \resumeSubHeadingListEnd
+
+\section{Education}
+  \resumeSubHeadingListStart
+    \resumeSubheading
+      {Pratt Community College}{Pratt, Kansas, USA}
+      {Computer Science; studies discontinued}{Aug. 2025 -- May 2026}
+    \resumeSubheading
+      {Federal University of Technology -- Paran\'a (UTFPR)}{Pato Branco, PR, Brazil}
+      {Systems Analysis and Development; 3 semesters completed (enrollment on hold)}{Feb. 2023 -- May 2025}
+  \resumeSubHeadingListEnd
+
+\section{Technical Skills}
+  \begin{itemize}[leftmargin=0.15in, label={}]
+    \small{\item{
+      \textbf{Current stack}: C\#, .NET, React, TypeScript, PostgreSQL, REST APIs \\
+      \textbf{Data and legacy systems}: SQL, VB6, data migration, FastReport, DevExpress \\
+      \textbf{Testing and tools}: Vitest, React Testing Library, xUnit, Git
+    }}
+  \end{itemize}
+
+\section{Languages}
+  \begin{itemize}[leftmargin=0.15in, label={}]
+    \small{\item{\textbf{Portuguese}: Native \\ \textbf{English}: Advanced}}
+  \end{itemize}
+
+\end{document}
